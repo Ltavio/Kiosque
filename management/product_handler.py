@@ -1,6 +1,6 @@
 from menu import products
 
-def get_product_by_id(id_product: int) -> dict[str]:
+def get_product_by_id(id_product: int) -> dict:
     for product in products:
         product_key = [value for key, value in product.items() if key == "_id"]
         if product_key == [id_product]:
@@ -65,3 +65,16 @@ def menu_report() -> str:
 
 
     return f'Products Count: {contagem_de_produtos} - Average Price: {preco_medio} - Most Common Type: {tipo_mais_comum}'
+
+
+def add_product(menu: str, product: dict) -> dict:
+    count_product_menu = len(menu)
+
+    if count_product_menu > 0:
+        product.update({"_id": count_product_menu + 1})
+    else:
+        product.update({"_id": 1 })
+    
+    menu.append(product)
+
+    return product
