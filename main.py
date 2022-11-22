@@ -14,14 +14,15 @@ if __name__ == "__main__":
     #     "description": "Sanduiche de Python",
     #     "type": "fast-food"
     # }
-    # print(add_product(products, new_product))
+    # print(add_product([], **new_product))
 
     # print(len(products))
-    table_1 = [{"_id": 1, "amount": 5}, {"_id": 19, "amount": 5}]
-    table_2 = [
-        {"_id": 10, "amount": 3},
-        {"_id": 20, "amount": 2},
-        {"_id": 21, "amount": 5},
-    ]
-    print(calculate_tab(table_1))
-    print(calculate_tab(table_2))
+    # table_1 = [{"_id": 1, "amount": 5}, {"_id": 19, "amount": 5}]
+    # table_2 = [
+    #     {"_id": 10, "amount": 3},
+    #     {"_id": 20, "amount": 2},
+    #     {"_id": 21, "amount": 5},
+    # ]
+    # print(calculate_tab(table_1))
+    # print(calculate_tab(table_2))
+    ...

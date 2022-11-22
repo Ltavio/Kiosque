@@ -1,6 +1,10 @@
 from menu import products
 
 def get_product_by_id(id_product: int) -> dict:
+    
+    if type(id_product) != int:
+        raise TypeError('product id must be an int')
+
     for product in products:
         product_key = [value for key, value in product.items() if key == "_id"]
         if product_key == [id_product]:
@@ -10,6 +14,10 @@ def get_product_by_id(id_product: int) -> dict:
 
 
 def get_products_by_type(type_product: str) -> list[dict]:
+    
+    if type(type_product) != str:
+        raise TypeError('product type must be a str')
+    
     list_type = []
 
     for product in products:
@@ -64,10 +72,10 @@ def menu_report() -> str:
             tipo_mais_comum = typer
 
 
-    return f'Products Count: {contagem_de_produtos} - Average Price: {preco_medio} - Most Common Type: {tipo_mais_comum}'
+    return f'Products Count: {contagem_de_produtos} - Average Price: ${preco_medio} - Most Common Type: {tipo_mais_comum}'
 
 
-def add_product(menu: str, product: dict) -> dict:
+def add_product(menu: str, **product: dict) -> dict:
     count_product_menu = len(menu)
 
     if count_product_menu > 0:
