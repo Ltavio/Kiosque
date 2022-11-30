@@ -1,4 +1,4 @@
-# M5 - Kiosque
+# Kiosque
 
 ## Como rodar os testes localmente
 
